@@ -26,6 +26,7 @@ app.post('/api/fileanalyse', (req, res) => {
 			const name = req.file.originalname,
 				type = req.file.mimetype,
 				size = req.file.size;
+			res.json({name: name, type: type, size: size});
 		}
 	});
 });
